@@ -1,6 +1,7 @@
 /* IMPORTING FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
+/* COMMON STYLES */
 body{
     padding: 0;
     margin:0;
@@ -34,6 +35,13 @@ a{
     text-decoration: none;
     color: white;
 }
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* NAV BAR */
 .dummy-hamburger{
     color:white; 
     font-size: 18px;
@@ -43,6 +51,7 @@ a{
 .nav-links li{
     padding-right: 36px;
     padding-left: 5px;
+    /* transition: border .2s; */
 }
 .nav-links li:hover{
     padding-top: 5px;
@@ -50,14 +59,16 @@ a{
     padding-left:5px;
     border: 2px solid white;
 }
+/* BUTTON  */
 .button{
     background-color: #E02C6D;
     padding: 10px 24px;
 }
 .button:hover{
-    background-color: #ff8f0e;
+    background-color: #91224a;
     box-shadow: 2px 2px 5px black;
 }
+/* HERO SECTION */
 .hero-content{
     position: relative;
     display: flex;
@@ -70,19 +81,24 @@ a{
     font-size: 64px;
     line-height: 80px;
 }
+.hero-banner{
+    width: 556px;
+    height: 438px;
+    padding-bottom: 86px;
+}
+/* HERO SECTION ANIMATION */
 #ball{
+    top: -400px;
     position: absolute;
-    z-index: 1;
     height: 50px;
     width: 50px;
-    top: -400px;
 }
-#animationTrigger:hover +#ball{
+#animationTrigger:hover + #ball{
     animation: drop 3s ease-out forwards;
 } 
 @keyframes drop { 
     0%{
-        transform: translateY(-100px);
+        transform: translateY(-400px);
     }
     10%{
         transform: translate(50px, 800px);
@@ -103,12 +119,8 @@ a{
         transform: translate(250px,800px);
     }
 }
-.hero-banner{
-    width: 556px;
-    height: 438px;
-    padding-bottom: 86px;
-}
-/* Players Section  */
+
+/* PLAYERS SECTION  */
 .playersSection{
     margin-top: 70px;
     width: 72%;
@@ -145,14 +157,14 @@ a{
     margin-top: 16px;
     margin-bottom: 10px;
     transition: color .5s;
-    /* color: black; */
 }
 .playerBio{
     color: #6C6C6C;
 }
 
+/* BONUS SECTION PLACEHOLDER IN FIGMA */
 .bonusPlaceholder{
-    margin-top: 60px;
+    margin-top: 165px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -168,6 +180,8 @@ a{
     width: 567px;
     height: 427px;
 }
+
+/* BONUS SECTION */
 .bonusSection{
     border-top: 2px solid gray;
     border-bottom: 2px solid gray;
@@ -198,12 +212,8 @@ a{
     flex-direction: column;
     justify-content: center;
 }
-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
+/* FOOTER  */
 footer img{
     width: 484px;
     height: 110px;
