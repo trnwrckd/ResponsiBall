@@ -97,9 +97,6 @@ footer{
     animation: drop 3s ease-out forwards;
 } 
 @keyframes drop { 
-    0%{
-        top: -400px;
-    }
     10%{
         transform: translate(50px, 800px);
     }
