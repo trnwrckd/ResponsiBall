@@ -4,7 +4,7 @@
 body{
     padding: 0;
     margin:0;
-    background-color: ;
+    background-color: #efefef ;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -48,7 +48,7 @@ a{
     padding: 10px 24px;
 }
 .button:hover{
-    background-color: #E05738;
+    background-color: #ff8f0e;
     box-shadow: 2px 2px 5px black;
 }
 .hero-content{
@@ -71,11 +71,11 @@ a{
     top: -400px;
 }
 #animationTrigger:hover +#ball{
-    animation: drop 3s ease-out;
+    animation: drop 3s ease-out forwards;
 } 
 @keyframes drop { 
-    0{
-        top: -400px;
+    0%{
+        transform: translateY(-100px);
     }
     10%{
         transform: translate(50px, 800px);
@@ -93,7 +93,7 @@ a{
         transform: translate(250px, 800px)
     }
     100%{
-        transform: translate(50px, -800px);
+        transform: translate(250px,800px);
     }
 }
 .hero-banner{
@@ -125,7 +125,7 @@ a{
     opacity: 80%;
 }
 .players:hover  .playerName{
-    color: rgb(116, 47, 35);
+    color: #ff8f0e;
 }
 .players img{
     width:300px;
@@ -143,22 +143,50 @@ a{
 .playerBio{
     color: #6C6C6C;
 }
-.bonusSection{
-    display: flex;
-    justify-content: space-between;
+
+.bonusPlaceholder{
     margin-top: 165px;
-    margin-bottom: 158px;
+    display: flex;
+    justify-content: space-around;
     padding: 0 10%;
 }
-.bonusText{
+#bonusText{
     font-size: 48px;
     line-height: 60px;
     font-weight: 700;
 }
-.bonusSection img{
+.bonusPlaceholder>img{
     margin-left: 66px;
     width: 567px;
     height: 427px;
+}
+.bonusSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 165px;
+    margin-bottom: 158px;
+    padding: 0 10%;
+}
+.sponsors h2 , #highlights h2{
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.sponsorContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px 20px;
+}
+.sponsorContainer img{
+    width: 90px;
+    height: 70px;
+}
+#highlights{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 footer{
     display: flex;

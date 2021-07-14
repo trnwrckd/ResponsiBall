@@ -36,6 +36,27 @@
         padding: 0;
         margin-top: 47px;
     }
+    .bonusPlaceholder{
+        margin-top: 165px;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        flex-direction: column;
+    }
+    #bonusText{
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 700;
+    }
+    #bonusText +p{
+        margin-bottom: 34px;
+    }
+    .bonusPlaceholder>img{
+        margin: 0;
+        padding-top: 29px;
+        width: 322px;
+        height: 248px;
+    }
     .bonusSection{   
         margin-top: 60px; 
         margin-bottom: 54.5px;
@@ -43,8 +64,19 @@
         display: flex;
         flex-direction: column;
     }
-    #bonusText +p{
-        margin-bottom: 34px;
+    .sponsorContainer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 15px 20px;
+    }
+    .sponsorContainer img{
+        width: 90px;
+        height: 70px;
+    }
+    #highlights iframe{
+        /* margin-top: 29px; */
+        width: 328px;
+        height: 248px;
     }
     /* IMAGES */
     .hero-banner{
@@ -61,12 +93,6 @@
         width:300px;
         height: 256px;
     } 
-    .bonusSection img{
-        margin: 0;
-        padding-top: 29px;
-        width: 322px;
-        height: 248px;
-    }
     footer img{
         width: 271px;
         height: 63px;
@@ -78,10 +104,32 @@
         font-size: 36px;
         line-height: 50px;
     }
-    #bonusText{
+    .sponsors h2, #highlights h2{
         font-size: 30px;
         line-height: 40px;
         font-weight: 700;
+        margin-bottom: 8px;
+    }
+    /* Animation Function */
+    @keyframes drop { 
+        10%{
+            transform: translate(25px, 800px);
+        }
+        30%{
+            transform: translate(75px, 600px);
+        }
+        45%{
+            transform: translate(100px, 800px);
+        }
+        65%{
+            transform: translate(125px, 650px);
+        }
+        80%{
+            transform: translate(150px, 800px)
+        }
+        100%{
+            transform: translate(150px,800px);
+        }
     }
 }
 @media only screen and (min-width:689px) and (max-width:992px){
@@ -113,13 +161,44 @@
     .players{
         align-items: center;
     }
+    .bonusPlaceholder{
+        margin-top: 165px;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    #bonusText{
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 700;
+    }
+    #bonusText +p{
+        margin-bottom: 34px;
+    }
+    .bonusPlaceholder>img{
+        margin: 0;
+        padding-top: 29px;
+        width: 322px;
+        height: 248px;
+    }
     .bonusSection{   
         margin-top: 60px; 
         margin-bottom: 54.5px;
         padding: 0;  
     }
-    #bonusText +p{
-        margin-bottom: 34px;
+    .sponsorContainer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 15px 20px;
+    }
+    .sponsorContainer img{
+        width: 90px;
+        height: 70px;
+    }
+    #highlights iframe{
+        margin-top: 29px;
+        width: 328px;
+        height: 248px;
     }
     /* IMAGES */
     .players img{
@@ -132,12 +211,6 @@
         width:329px;
         height: 259px;
     }
-    .bonusSection img{
-        margin: 0;
-        margin-top: 29px;
-        width: 322px;
-        height: 248px;
-    }
     footer img{
         width: 271px;
         height: 63px;
@@ -149,9 +222,10 @@
         font-size: 36px;
         line-height: 50px;
     }
-    #bonusText{
+    .sponsors h2 ,#highlights h2{
         font-size: 30px;
         line-height: 40px;
         font-weight: 700;
     }
+    /* Animation Function */
 }
