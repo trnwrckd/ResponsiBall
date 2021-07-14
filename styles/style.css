@@ -13,7 +13,8 @@ header{
     background-color: #2D25A0;
     font-weight: 500;
     margin: 0;
-    padding: 1px 10%;
+    padding: 0 10%;
+    padding-top: 42px;
 }
 footer{
     margin-bottom: 63px;
@@ -23,12 +24,21 @@ ul{
     justify-content: space-between;
     padding: 0;
 }
+i{
+    padding: 0 5px;
+}
 li{
     display: inline;
 }
 a{
     text-decoration: none;
     color: white;
+}
+.dummy-hamburger{
+    color:white; 
+    font-size: 18px;
+    display: none;
+    cursor: pointer;
 }
 .nav-links li{
     padding-right: 36px;
@@ -63,20 +73,34 @@ a{
     grid-gap: 27px 30px;
 }
 .players{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
     padding: 15px;
 }
+.player-img-container{
+    overflow: hidden;
+}
+.players:hover  img{
+    transform: scale(1.2);
+    opacity: 80%;
+}
+.players:hover  .playerName{
+    color: rgb(116, 47, 35);
+}
 .players img{
     width:300px;
     height: 256px;
+    transition: transform .5s;
 }
 .playerName{
     font-weight: 700;
     font-size: 28px;
     margin-top: 16px;
     margin-bottom: 10px;
+    transition: color .5s;
+    /* color: black; */
 }
 .playerBio{
     color: #6C6C6C;
@@ -108,7 +132,11 @@ footer img{
     width: 484px;
     height: 110px;
 }
-.footer-icons{
+.footer-icons a{
     font-size: 32px;
     margin: 20px 0;
+    color: #E02C6D;
+}
+.footer-icons a:hover{
+    color: black;
 }
