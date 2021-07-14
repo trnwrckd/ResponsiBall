@@ -47,7 +47,12 @@ a{
     background-color: #E02C6D;
     padding: 10px 24px;
 }
+.button:hover{
+    background-color: #E05738;
+    box-shadow: 2px 2px 5px black;
+}
 .hero-content{
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-top: 67px;
@@ -58,12 +63,45 @@ a{
     font-size: 64px;
     line-height: 80px;
 }
+#ball{
+    position: absolute;
+    z-index: 1;
+    height: 50px;
+    width: 50px;
+    top: -400px;
+}
+#animationTrigger:hover +#ball{
+    animation: drop 3s ease-out;
+} 
+@keyframes drop { 
+    0{
+        top: -400px;
+    }
+    10%{
+        transform: translate(50px, 800px);
+    }
+    30%{
+        transform: translate(100px, 600px);
+    }
+    45%{
+        transform: translate(150px, 800px);
+    }
+    65%{
+        transform: translate(200px, 700px);
+    }
+    80%{
+        transform: translate(250px, 800px)
+    }
+    100%{
+        transform: translate(50px, -800px);
+    }
+}
 .hero-banner{
     width: 556px;
     height: 438px;
     padding-bottom: 86px;
 }
-/* Players Section */
+/* Players Section  */
 .playersSection{
     margin-top: 70px;
     width: 72%;
@@ -135,7 +173,7 @@ footer img{
 .footer-icons a{
     font-size: 32px;
     margin: 20px 0;
-    color: #E02C6D;
+    color: #971c49;
 }
 .footer-icons a:hover{
     color: black;
