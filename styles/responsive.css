@@ -66,7 +66,7 @@
     }
     .sponsorContainer{
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
         grid-gap: 15px 20px;
     }
     .sponsorContainer img{
@@ -74,7 +74,6 @@
         height: 70px;
     }
     #highlights iframe{
-        /* margin-top: 29px; */
         width: 328px;
         height: 248px;
     }
@@ -164,8 +163,9 @@
     .bonusPlaceholder{
         margin-top: 165px;
         display: flex;
-        justify-content: space-around;
-        padding: 0;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* padding: 0; */
     }
     #bonusText{
         font-size: 30px;
